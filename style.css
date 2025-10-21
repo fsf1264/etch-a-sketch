@@ -1,0 +1,17 @@
+body{
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 900px;
+    height: 450px;
+    margin: 0 auto;
+}
+.container div{
+    width: 45px;
+    height: 45px;
+    border: solid 2px black;
+    background-color: white;
+    margin: 3px;
+}

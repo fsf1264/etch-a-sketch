@@ -9,14 +9,15 @@ body{
 .container{
     display: flex;
     flex-wrap: wrap;
-    width: 900px;
-    height: 450px;
+    width: 864px;
+    height: 864px;
     margin: 0 auto;
+    border: solid 1px black;
 }
 .container div{
-    width: 45px;
-    height: 45px;
-    border: solid 2px black;
+    box-sizing: border-box;
+    width: 54px;
+    height: 54px;
+    border: solid 1px black;
     background-color: white;
-    margin: 3px;
 }

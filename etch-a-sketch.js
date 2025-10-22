@@ -12,7 +12,7 @@ grid.classList.add('grids')
 container.appendChild(grid)
 }}
 
-function mouseenterListener(grids){
+function listentoMouseenter(grids){
     for(let grid of grids){
     grid.addEventListener("mouseenter", () =>{
     grid.style.backgroundColor = 'blue'})    
@@ -22,5 +22,5 @@ function mouseenterListener(grids){
 const container = document.querySelector('.container')
 setupGrids()
 const grids = document.querySelectorAll('.grids')
-mouseenterListener(grids)
+listentoMouseenter(grids)
 

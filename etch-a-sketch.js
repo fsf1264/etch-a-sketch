@@ -45,12 +45,22 @@ function listentoGridsButton(gridsButton){
     listentoMouseenter(grids)
     }) 
 }
-
+function listentoResetButton(resetButton){
+    resetButton.addEventListener("click", 
+    () =>{
+    const containerGrids = document.querySelectorAll('.container > div')
+    for (let grid of containerGrids){
+        grid.style.backgroundColor = 'white'
+        console.log(123)
+    }})
+}
 const container = document.querySelector('.container')
 const btnGrids = document.querySelector('.btn-grids')
+const btnReset = document.querySelector('.btn-reset')
 setupGrids()
 let grids = document.querySelectorAll('.grids')
 listentoGridsButton(btnGrids)
+listentoResetButton(btnReset)
 listentoMouseenter(grids)
 
 

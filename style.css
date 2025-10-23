@@ -9,11 +9,16 @@ body{
     justify-content: space-between;
     gap: 10px;
 }
-.btn-grids, .btn-reset{
+.btn-color{
+    width: 42px;
+    height: 42px;
+}
+.btn-grids, .btn-reset, .btn-color{
     padding: 10px;
     font-size: 16px;
     border-radius: 7px;
 }
+
 .header{
     width: 310px;
     margin-right: auto;

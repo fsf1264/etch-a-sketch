@@ -9,6 +9,9 @@ let filteredNumberOfGrids = numberOfGrids
 if(numberOfGrids > 100){
     filteredNumberOfGrids = 100
 }
+else if (numberOfGrids < 1 || numberOfGrids === null ||numberOfGrids === ''){
+    filteredNumberOfGrids = 16
+}
 let grids = []
 for (let i = 0; i < filteredNumberOfGrids; i++){
     for (let i = 0; i < filteredNumberOfGrids; i++){
@@ -51,7 +54,6 @@ function listentoResetButton(resetButton){
     const containerGrids = document.querySelectorAll('.container > div')
     for (let grid of containerGrids){
         grid.style.backgroundColor = 'white'
-        console.log(123)
     }})
 }
 const container = document.querySelector('.container')

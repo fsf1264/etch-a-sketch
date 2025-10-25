@@ -13,7 +13,7 @@ body{
     width: 42px;
     height: 42px;
 }
-.btn-grids, .btn-reset, .btn-color{
+.btn-squares, .btn-reset, .btn-color{
     padding: 10px;
     font-size: 16px;
     border-radius: 7px;

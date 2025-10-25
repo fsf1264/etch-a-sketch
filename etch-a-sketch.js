@@ -1,60 +1,60 @@
-function setupGrids(numberOfGrids = 16, containerWidth = 864, containerHeight = 864){
-const containerGrids = document.querySelectorAll('.container > div')
-if(containerGrids!= []){   
-    for(let grid of containerGrids){
-        container.removeChild(grid)
+function setupSquares(numberOfSquares = 16, containerWidth = 864, containerHeight = 864){
+const containerSquares = document.querySelectorAll('.container > div')
+if(containerSquares!= []){   
+    for(let square of containerSquares){
+        container.removeChild(square)
     }
 }
-let filteredNumberOfGrids = numberOfGrids
-if(numberOfGrids > 100){
-    filteredNumberOfGrids = 100
+let filteredNumberOfSquares = numberOfSquares
+if(numberOfSquares > 100){
+    filteredNumberOfSquares = 100
 }
-else if (numberOfGrids < 1 || numberOfGrids === null ||numberOfGrids === ''){
-    filteredNumberOfGrids = 16
+else if (numberOfSquares < 1 || numberOfSquares === null ||numberOfSquares === ''){
+    filteredNumberOfSquares = 16
 }
-let grids = []
-for (let i = 0; i < filteredNumberOfGrids; i++){
-    for (let i = 0; i < filteredNumberOfGrids; i++){
+let squares = []
+for (let i = 0; i < filteredNumberOfSquares; i++){
+    for (let i = 0; i < filteredNumberOfSquares; i++){
     let newElement 
-    grids.push(newElement)
+    squares.push(newElement)
 }
 }
-for (let grid of grids){
-grid = document.createElement('div')
-grid.classList.add('grids')
-let gridWidth = containerWidth / filteredNumberOfGrids
-let gridHeight = containerHeight / filteredNumberOfGrids
-grid.style.width = `${gridWidth}px`
-grid.style.height = `${gridHeight}px`
-if (gridWidth < 25){
-    grid.style.border = 'solid 0px black'
+for (let square of squares){
+square = document.createElement('div')
+square.classList.add('squares')
+let squareWidth = containerWidth / filteredNumberOfSquares
+let squareHeight = containerHeight / filteredNumberOfSquares
+square.style.width = `${squareWidth}px`
+square.style.height = `${squareHeight}px`
+if (squareWidth < 25){
+    square.style.border = 'solid 0px black'
 }
-container.appendChild(grid)
+container.appendChild(square)
 }}
 
-function listentoMouseenter(grids){
-    for(let grid of grids){
-    grid.addEventListener("mouseenter", () =>{
-    grid.style.backgroundColor = currentColor})    
+function listentoMouseenter(squares){
+    for(let square of squares){
+    square.addEventListener("mouseenter", () =>{
+    square.style.backgroundColor = currentColor})    
 }
 }
 
-function listentoGridsButton(gridsButton){
-    gridsButton.addEventListener("click", 
+function listentoSquaresButton(squaresButton){
+    squaresButton.addEventListener("click", 
     () =>{
-    let numberOfGrids = prompt('What number of squares per side do you want?')
-    setupGrids(numberOfGrids)
-    let grids = document.querySelectorAll('.grids')
-    listentoMouseenter(grids)
+    let numberOfSquares = prompt('What number of squares per side do you want?')
+    setupSquares(numberOfSquares)
+    let squares = document.querySelectorAll('.squares')
+    listentoMouseenter(squares)
     }) 
 }
 
 function listentoResetButton(resetButton){
     resetButton.addEventListener("click", 
     () =>{
-    const containerGrids = document.querySelectorAll('.container > div')
-    for (let grid of containerGrids){
-        grid.style.backgroundColor = 'white'
+    const containerSquares = document.querySelectorAll('.container > div')
+    for (let square of containerSquares){
+        square.style.backgroundColor = 'white'
     }})
 }
 
@@ -64,7 +64,7 @@ function listentoColorButton(colorButton){
         let idOfCurrentColor = COLORS.findIndex((color) => color === currentColor)
         currentColor = COLORS[idOfCurrentColor + 1]
         if(currentColor === undefined){
-            currentColor = 'blue'
+            currentColor = COLORS[0]
         }
         btnColor.style.backgroundColor = currentColor
     })
@@ -74,13 +74,13 @@ const COLORS = ['blue', 'black', 'red', 'green', '#FF4D00', '#FF69B4', 'yellow',
 const container = document.querySelector('.container')
 const btnColor = document.querySelector('.btn-color')
 btnColor.style.backgroundColor = currentColor
-const btnGrids = document.querySelector('.btn-grids')
+const btnSquares = document.querySelector('.btn-squares')
 const btnReset = document.querySelector('.btn-reset')
-setupGrids()
-let grids = document.querySelectorAll('.grids')
+setupSquares()
+let squares = document.querySelectorAll('.squares')
 listentoColorButton(btnColor)
-listentoGridsButton(btnGrids)
+listentoSquaresButton(btnSquares)
 listentoResetButton(btnReset)
-listentoMouseenter(grids)
+listentoMouseenter(squares)
 
 

@@ -1,1 +1,1 @@
-# etch-a-sketch
+This is my second javascript project. I practiced manipulating the DOM, adding and using event listeners, manipulating arrays.
